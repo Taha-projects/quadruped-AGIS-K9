@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<rect width="1200" height="760" fill="#fbfcfe"/>
+<text x="600" y="48" text-anchor="middle" font-family="Arial" font-size="30" font-weight="bold" fill="#172b4d">Raspberry Pi to PCA9685 Wiring</text>
+<g font-family="Arial">
+<rect x="70" y="110" width="430" height="280" rx="18" fill="#e2f0ff" stroke="#3167a6" stroke-width="3"/>
+<text x="285" y="150" text-anchor="middle" font-size="24" font-weight="bold" fill="#172b4d">Raspberry Pi 3 Model A+</text>
+<text x="110" y="205" font-size="19">Physical pin 1: 3.3 V</text><text x="110" y="250" font-size="19">Physical pin 3: GPIO2 / SDA1</text><text x="110" y="295" font-size="19">Physical pin 5: GPIO3 / SCL1</text><text x="110" y="340" font-size="19">Physical pin 6: GND</text>
+<rect x="700" y="110" width="430" height="280" rx="18" fill="#eee4ff" stroke="#7353a6" stroke-width="3"/>
+<text x="915" y="150" text-anchor="middle" font-size="24" font-weight="bold" fill="#172b4d">PCA9685 Board</text>
+<text x="745" y="205" font-size="19">VCC: logic power</text><text x="745" y="250" font-size="19">SDA: I2C data</text><text x="745" y="295" font-size="19">SCL: I2C clock</text><text x="745" y="340" font-size="19">GND: shared ground</text>
+<rect x="700" y="490" width="430" height="110" rx="18" fill="#fff0d6" stroke="#b7791f" stroke-width="3"/>
+<text x="915" y="530" text-anchor="middle" font-size="22" font-weight="bold">Regulated Servo Supply</text><text x="915" y="565" text-anchor="middle" font-size="18">Positive to V+; negative to PCA GND</text>
+<rect x="70" y="490" width="430" height="110" rx="18" fill="#ffe2e2" stroke="#a64646" stroke-width="3"/>
+<text x="285" y="530" text-anchor="middle" font-size="22" font-weight="bold">Servo connectors</text><text x="285" y="565" text-anchor="middle" font-size="18">Channels 0-7, one hip/knee per leg</text>
+</g>
+<g stroke-width="5" fill="none">
+<path d="M500 200 L690 200" stroke="#d69e2e"/><path d="M500 245 L690 245" stroke="#3182ce"/><path d="M500 290 L690 290" stroke="#805ad5"/><path d="M500 335 L690 335" stroke="#555"/>
+<path d="M915 390 L915 480" stroke="#d69e2e"/><path d="M870 390 L870 475" stroke="#555"/><path d="M700 545 L510 545" stroke="#3182ce"/>
+</g>
+<g font-family="Arial" font-size="16" fill="#344563">
+<text x="545" y="190">3.3 V</text><text x="555" y="235">SDA</text><text x="555" y="280">SCL</text><text x="555" y="325">GND</text>
+<text x="930" y="445">V+ to servo rail</text><text x="885" y="465">common GND</text><text x="545" y="535">PWM signals</text>
+</g>
+<rect x="70" y="635" width="1060" height="70" rx="12" fill="#fff3cd" stroke="#c28b12" stroke-width="2"/>
+<text x="600" y="665" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#684d00">Never connect servo V+ to Pi 3.3 V or 5 V.</text>
+<text x="600" y="690" text-anchor="middle" font-family="Arial" font-size="16" fill="#684d00">Pi, PCA9685, and servo supply grounds must be common.</text>
+</svg>

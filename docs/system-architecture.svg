@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#355070"/></marker></defs>
+<rect width="1200" height="650" fill="#f7f9fc"/>
+<text x="600" y="48" text-anchor="middle" font-family="Arial" font-size="30" font-weight="bold" fill="#172b4d">Taha Quadruped System Architecture</text>
+<g font-family="Arial" text-anchor="middle">
+<rect x="55" y="145" width="240" height="145" rx="16" fill="#d9eaff" stroke="#3167a6" stroke-width="3"/><text x="175" y="190" font-size="23" font-weight="bold">Phone / Laptop</text><text x="175" y="230" font-size="17">Browser control page</text><text x="175" y="260" font-size="17">VLC video receiver</text>
+<rect x="400" y="130" width="310" height="205" rx="18" fill="#dff4e5" stroke="#308252" stroke-width="3"/><text x="555" y="175" font-size="24" font-weight="bold">Raspberry Pi 3 A+</text><text x="555" y="215" font-size="18">Flask controls :5000</text><text x="555" y="250" font-size="18">rpicam-vid / FFmpeg</text><text x="555" y="285" font-size="17">I2C bus 1</text>
+<rect x="55" y="420" width="240" height="100" rx="16" fill="#fff0d6" stroke="#b7791f" stroke-width="3"/><text x="175" y="460" font-size="22" font-weight="bold">CSI Camera</text><text x="175" y="490" font-size="17">Ribbon cable to Pi</text>
+<rect x="400" y="420" width="310" height="105" rx="16" fill="#eee2ff" stroke="#7353a6" stroke-width="3"/><text x="555" y="460" font-size="22" font-weight="bold">PCA9685 at 0x40</text><text x="555" y="492" font-size="17">I2C in, 8 PWM outputs</text>
+<rect x="900" y="430" width="240" height="100" rx="16" fill="#ffe2e2" stroke="#a64646" stroke-width="3"/><text x="1020" y="470" font-size="22" font-weight="bold">8 Servos</text><text x="1020" y="500" font-size="17">4 hips + 4 knees</text>
+<rect x="900" y="175" width="240" height="100" rx="16" fill="#fff0d6" stroke="#b7791f" stroke-width="3"/><text x="1020" y="215" font-size="21" font-weight="bold">Servo Power</text><text x="1020" y="245" font-size="17">Separate regulated supply</text>
+</g>
+<g stroke="#355070" stroke-width="4" fill="none" marker-end="url(#a)">
+<path d="M295 190 L390 190"/><path d="M400 250 L305 250"/><path d="M295 460 C345 460 350 320 400 300"/><path d="M555 335 L555 410"/><path d="M710 470 L890 470"/><path d="M1020 285 L1020 420"/>
+</g>
+<g font-family="Arial" font-size="16" fill="#253858">
+<text x="310" y="178">Wi-Fi HTTP :5000</text><text x="310" y="242">RTP video :5004</text><text x="315" y="390">CSI ribbon</text><text x="570" y="380">I2C SDA/SCL</text><text x="750" y="455">PWM 0-7</text><text x="1035" y="350">V+ and GND</text>
+</g>
+<text x="600" y="590" text-anchor="middle" font-family="Arial" font-size="17" fill="#344563">Pi, PCA9685, and servo supply grounds must be common.</text>
+</svg>

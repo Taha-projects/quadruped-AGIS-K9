@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taha Quadruped</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; }
+    body { max-width: 520px; margin: 24px auto; padding: 0 14px; text-align: center; background: #f3f5f8; color: #17202a; }
+    h1 { font-size: 1.5rem; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    button { min-height: 58px; border: 0; border-radius: 12px; font-size: 18px; font-weight: 650; color: white; background: #2867c7; touch-action: manipulation; }
+    button:active { filter: brightness(.85); }
+    .stop { background: #bd3030; grid-column: 1 / -1; }
+    #status { min-height: 1.5em; margin: 18px; }
+    .note { color: #4d5966; font-size: .92rem; }
+  </style>
+</head>
+<body>
+  <h1>Taha Quadruped</h1>
+  <div class="grid">
+    <button onclick="send('stand')">Stand</button>
+    <button onclick="send('sit')">Sit</button>
+    <button onclick="send('forward')">Forward</button>
+    <button onclick="send('backward')">Backward</button>
+    <button onclick="send('left')">Left</button>
+    <button onclick="send('right')">Right</button>
+    <button onclick="send('wave')">Wave</button>
+    <button onclick="send('dance')">Dance</button>
+    <button class="stop" onclick="send('stop')">Stop / Stand</button>
+  </div>
+  <p id="status">Ready</p>
+  <p class="note">Use on a trusted local Wi-Fi network only.</p>
+  <script>
+    async function send(action) {
+      const status = document.getElementById('status');
+      status.textContent = 'Sending ' + action + '...';
+      try {
+        const response = await fetch('/' + action, { method: 'POST' });
+        const result = await response.json();
+        status.textContent = result.message || result.error || 'Command sent';
+      } catch (_) {
+        status.textContent = 'Could not reach the Raspberry Pi';
+      }
+    }
+  </script>
+</body>
+</html>
