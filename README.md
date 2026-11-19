@@ -49,7 +49,10 @@ Enable I2C in raspi-config and verify with sudo i2cdetect -y 1; the board should
 ## Install the Pi software
 
 1. Raspberry Pi Imager: choose Raspberry Pi OS Lite (32-bit); set hostname taha, username pipi, Wi-Fi, and enable SSH with password authentication. Write and verify.
-2. Connect from PowerShell: ssh pipi@taha.local
+2.  Connect from PowerShell, replacing these placeholders with the username and hostname set in Raspberry Pi Imager:
+   ``powershell
+   ssh YOUR_USERNAME@YOUR_HOSTNAME.local
+   
 3. Enable I2C: sudo raspi-config → Interface Options → I2C; finish and reboot.
 4. Install packages:
    ~~~bash
@@ -96,10 +99,4 @@ If the OS reports read-only filesystem or I/O errors, stop and inspect SD card a
 - camera/stream-to-laptop.sh: H.264/RTP camera helper
 - docs/: wiring instructions and diagrams
 - firmware-reference/: ESP32-tested motion values
-
-## License
-
-No reuse license is included. Public visibility does not grant reuse rights unless a license is added.
-
-
 
