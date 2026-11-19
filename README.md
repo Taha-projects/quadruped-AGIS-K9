@@ -1,4 +1,4 @@
-# Taha Quadruped
+# Quadruped AGIS-K9
 
 A Raspberry Pi 3 Model A+ quadruped prototype using eight hobby servos, a PCA9685 PWM driver, a local phone/laptop control page, and an optional CSI camera stream to VLC.
 
